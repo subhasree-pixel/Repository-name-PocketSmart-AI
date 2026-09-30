@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <p class="eyebrow">
+            02 · PARTY PLANNER
+        </p>
+
+        <h1>
+            Plan the celebration
+        </h1>
+
+        <p>
+            Allocate your event budget
+            across food, venue, decor
+            and entertainment.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="planner-layout">
+
+    <form
+        id="partyForm"
+        class="panel planner-form"
+    >
+
+        <label>
+            Total budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                value="75000"
+            >
+        </label>
+
+
+        <label>
+            Guests
+
+            <input
+                name="guests"
+                type="number"
+                min="1"
+                required
+                value="30"
+            >
+        </label>
+
+
+        <label>
+            Event type
+
+            <select name="event_type">
+
+                <option>
+                    birthday
+                </option>
+
+                <option>
+                    corporate
+                </option>
+
+                <option>
+                    wedding
+                </option>
+
+                <option>
+                    anniversary
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Venue
+
+            <input
+                name="venue"
+                value="home"
+            >
+        </label>
+
+
+        <label>
+            City
+
+            <input
+                name="city"
+                value="Chennai"
+            >
+        </label>
+
+
+        <label>
+            Food preference
+
+            <select name="food_preference">
+
+                <option>
+                    mixed
+                </option>
+
+                <option>
+                    vegetarian
+                </option>
+
+                <option>
+                    vegan
+                </option>
+
+                <option>
+                    non-vegetarian
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Priorities
+
+            <input
+                name="priorities"
+                placeholder="food quality, ambience"
+            >
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate party plan ✦
+        </button>
+
+
+        <div
+            id="formMessage"
+            class="message"
+        ></div>
+
+    </form>
+
+
+    <div
+        id="results"
+        class="panel results"
+    >
+
+        <div class="empty">
+            Your recommendations
+            will appear here.
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPlanner("party");
+</script>
+
+{% endblock %}

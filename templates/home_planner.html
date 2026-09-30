@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <p class="eyebrow">
+            01 · HOME INTERIOR
+        </p>
+
+        <h1>
+            Build a home plan
+        </h1>
+
+        <p>
+            Tell us what you need and
+            we'll balance style,
+            function and budget.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="planner-layout">
+
+    <form
+        id="homeForm"
+        class="panel planner-form"
+    >
+
+        <label>
+            Total budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                value="50000"
+            >
+        </label>
+
+
+        <label>
+            Rooms
+
+            <input
+                name="rooms"
+                placeholder="Living Room, Bedroom"
+                required
+            >
+        </label>
+
+
+        <label>
+            Style
+
+            <select name="style">
+
+                <option>
+                    modern
+                </option>
+
+                <option>
+                    minimal
+                </option>
+
+                <option>
+                    boho
+                </option>
+
+                <option>
+                    elegant
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Location
+
+            <input
+                name="location"
+                value="India"
+            >
+        </label>
+
+
+        <label>
+            Priorities
+
+            <input
+                name="priorities"
+                placeholder="durability, lighting, storage"
+            >
+        </label>
+
+
+        <label>
+            Items & quantities
+
+            <textarea
+                name="items"
+                placeholder='{"lights": 4, "fans": 2, "dining_tables": 1}'
+            ></textarea>
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate home plan ✦
+        </button>
+
+
+        <div
+            id="formMessage"
+            class="message"
+        ></div>
+
+    </form>
+
+
+    <div
+        id="results"
+        class="panel results"
+    >
+
+        <div class="empty">
+            Your recommendations
+            will appear here.
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPlanner("home");
+</script>
+
+{% endblock %}

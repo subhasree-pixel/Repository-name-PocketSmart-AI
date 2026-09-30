@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <p class="eyebrow">
+            YOUR SPACE
+        </p>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p id="welcome">
+            Loading your workspace…
+        </p>
+
+    </div>
+
+
+    <button
+        class="btn ghost"
+        onclick="logout()"
+    >
+        Log out
+    </button>
+
+</section>
+
+
+<section class="grid three">
+
+    <a
+        class="feature link-card"
+        href="/planner/home"
+    >
+
+        <span>
+            🏠
+        </span>
+
+        <h2>
+            Home planner
+        </h2>
+
+        <p>
+            Interior budgeting
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature link-card"
+        href="/planner/party"
+    >
+
+        <span>
+            🎉
+        </span>
+
+        <h2>
+            Party planner
+        </h2>
+
+        <p>
+            Event budgeting
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature link-card"
+        href="/planner/jewelry"
+    >
+
+        <span>
+            💎
+        </span>
+
+        <h2>
+            Jewelry planner
+        </h2>
+
+        <p>
+            Style matching
+        </p>
+
+    </a>
+
+</section>
+
+
+<section class="panel">
+
+    <div class="section-title">
+
+        <h2>
+            Recent plans
+        </h2>
+
+        <a href="/history-page">
+            View all
+        </a>
+
+    </div>
+
+    <div
+        id="recent"
+        class="history-list"
+    >
+        Loading…
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    loadDashboard();
+</script>
+
+{% endblock %}

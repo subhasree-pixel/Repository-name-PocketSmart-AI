@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <p class="eyebrow">
+            03 · JEWELRY
+        </p>
+
+        <h1>
+            Find your finishing touch
+        </h1>
+
+        <p>
+            Use an outfit image optionally.
+            Gemini can use visual cues
+            alongside your preferences.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="planner-layout">
+
+    <form
+        id="jewelryForm"
+        class="panel planner-form"
+        enctype="multipart/form-data"
+    >
+
+        <label>
+            Budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                value="10000"
+            >
+        </label>
+
+
+        <label>
+            Occasion
+
+            <select name="occasion">
+
+                <option>
+                    wedding
+                </option>
+
+                <option>
+                    party
+                </option>
+
+                <option>
+                    festive
+                </option>
+
+                <option>
+                    office
+                </option>
+
+                <option>
+                    date
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Style
+
+            <select name="style">
+
+                <option>
+                    elegant
+                </option>
+
+                <option>
+                    minimal
+                </option>
+
+                <option>
+                    statement
+                </option>
+
+                <option>
+                    traditional
+                </option>
+
+                <option>
+                    modern
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Outfit color
+
+            <input
+                name="outfit_color"
+                placeholder="emerald green"
+            >
+        </label>
+
+
+        <label>
+            Metal preference
+
+            <select name="metal_preference">
+
+                <option>
+                    any
+                </option>
+
+                <option>
+                    gold
+                </option>
+
+                <option>
+                    silver
+                </option>
+
+                <option>
+                    rose gold
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+            Outfit image
+
+            <input
+                name="outfit_image"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+            >
+
+        </label>
+
+
+        <label>
+            Extra notes
+
+            <textarea
+                name="image_notes"
+                placeholder="Neckline, sleeve style, or anything else to consider"
+            ></textarea>
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate jewelry plan ✦
+        </button>
+
+
+        <div
+            id="formMessage"
+            class="message"
+        ></div>
+
+    </form>
+
+
+    <div
+        id="results"
+        class="panel results"
+    >
+
+        <div class="empty">
+            Your recommendations
+            will appear here.
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPlanner("jewelry");
+</script>
+
+{% endblock %}

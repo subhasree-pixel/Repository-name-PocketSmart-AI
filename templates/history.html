@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <p class="eyebrow">
+            SAVED WORK
+        </p>
+
+        <h1>
+            Recommendation history
+        </h1>
+
+        <p>
+            Review your previous plans
+            and generated recommendations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="panel">
+
+    <div
+        id="history"
+        class="history-list"
+    >
+        Loading…
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    loadHistory();
+</script>
+
+{% endblock %}

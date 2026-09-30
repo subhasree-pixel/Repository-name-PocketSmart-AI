@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="auth">
+
+    <div class="panel">
+
+        <p class="eyebrow">
+            GET STARTED
+        </p>
+
+        <h1>
+            Create account
+        </h1>
+
+        <p>
+            Your plans are saved to your
+            private recommendation history.
+        </p>
+
+
+        <form id="registerForm">
+
+            <label>
+                Full name
+
+                <input
+                    name="full_name"
+                    required
+                    minlength="2"
+                >
+            </label>
+
+
+            <label>
+                Email
+
+                <input
+                    name="email"
+                    type="email"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Password
+
+                <input
+                    name="password"
+                    type="password"
+                    required
+                    minlength="8"
+                >
+            </label>
+
+
+            <button
+                class="btn"
+                type="submit"
+            >
+                Create account
+            </button>
+
+
+            <div
+                id="formMessage"
+                class="message"
+            ></div>
+
+        </form>
+
+
+        <p class="muted">
+
+            Already registered?
+
+            <a href="/login">
+                Sign in
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindRegister();
+</script>
+
+{% endblock %}

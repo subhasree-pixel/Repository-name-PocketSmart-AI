@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PocketSmart AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #17233c;
+        }
+
+        header {
+            background: #101828;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .hero {
+            background: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #667085;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #101828;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .planners {
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .planners h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .card p {
+            color: #667085;
+            line-height: 1.6;
+            min-height: 80px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: #101828;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PocketSmart AI</h1>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="#planners">Planners</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+
+        <h2>Plan Smarter with PocketSmart AI</h2>
+
+        <p>
+            Your smart budget and recommendation assistant
+            for home interiors, parties, and jewelry.
+        </p>
+
+        <a href="#planners" class="hero-button">
+            Explore Planners
+        </a>
+
+    </section>
+
+
+    <section class="planners" id="planners">
+
+        <h2>Choose Your Planner</h2>
+
+        <div class="cards">
+
+            <!-- HOME PLANNER -->
+            <div class="card">
+
+                <h3>🏠 Home Interior</h3>
+
+                <p>
+                    Plan your home decor, furniture,
+                    lighting, and other interior requirements
+                    according to your budget.
+                </p>
+
+                <a href="/home-planner">
+                    Start Planning
+                </a>
+
+            </div>
+
+
+            <!-- PARTY PLANNER -->
+            <div class="card">
+
+                <h3>🎉 Party Planner</h3>
+
+                <p>
+                    Plan your event with budget-based
+                    suggestions for food, venues,
+                    decorations, and guests.
+                </p>
+
+                <a href="/party-planner">
+                    Start Planning
+                </a>
+
+            </div>
+
+
+            <!-- JEWELRY PLANNER -->
+            <div class="card">
+
+                <h3>💎 Jewelry Planner</h3>
+
+                <p>
+                    Find jewelry suggestions based on
+                    your budget, occasion, style,
+                    and outfit.
+                </p>
+
+                <a href="/jewelry-planner">
+                    Start Planning
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
